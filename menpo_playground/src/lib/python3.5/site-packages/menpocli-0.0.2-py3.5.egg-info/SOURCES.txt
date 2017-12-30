@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.cfg
+setup.py
+versioneer.py
+bin/menpodetect
+bin/menpofit
+menpocli/__init__.py
+menpocli/_version.py
+menpocli/io.py
+menpocli.egg-info/PKG-INFO
+menpocli.egg-info/SOURCES.txt
+menpocli.egg-info/dependency_links.txt
+menpocli.egg-info/requires.txt
+menpocli.egg-info/top_level.txt

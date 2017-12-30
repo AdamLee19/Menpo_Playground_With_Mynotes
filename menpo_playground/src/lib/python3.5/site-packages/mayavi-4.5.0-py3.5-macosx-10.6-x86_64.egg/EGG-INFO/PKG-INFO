@@ -1,0 +1,81 @@
+Metadata-Version: 1.1
+Name: mayavi
+Version: 4.5.0
+Summary: The Mayavi scientific data 3-dimensional visualizer.
+Home-page: http://docs.enthought.com/mayavi/mayavi/
+Author: ETS Developers
+Author-email: enthought-dev@enthought.com
+License: BSD
+Download-URL: https://www.github.com/enthought/mayavi
+Description: The Mayavi *project* includes two related *packages* for 3-dimensional
+        visualization:
+        
+        - **Mayavi2**: A tool for easy and interactive visualization of data.
+        - **TVTK**: A Traits-based wrapper for the Visualization Toolkit, a popular
+          open-source visualization library.
+        
+        These libraries operate at different levels of abstraction. TVTK manipulates
+        visualization objects, while Mayavi2 lets you operate on your data, and then
+        see the results. Most users either use the Mayavi user interface or program
+        to its scripting interface; you probably don't need to interact with TVTK
+        unless you want to create a new Mayavi module.
+        
+        Mayavi2
+        -------
+        Mayavi2 seeks to provide easy and interactive visualization of 3-D data.
+        It offers:
+        
+        - An (optional) rich user interface with dialogs to interact with all data
+          and objects in the visualization.
+        - A simple and clean scripting interface in Python, including one-liners,
+          or an object-oriented programming interface.
+        - The power of the VTK toolkit, harnessed through these interfaces, without
+          forcing you to learn it.
+        
+        Additionally Mayavi2 is a reusable tool that can be embedded in your
+        applications in different ways or combined with the Envisage
+        application-building framework to assemble domain-specific tools.
+        
+        
+        
+        TVTK
+        ----
+        
+        TVTK wraps VTK objects to provide a convenient, Pythonic API, while supporting
+        Traits attributes and NumPy/SciPy arrays. TVTK is implemented mostly in pure
+        Python, except for a small extension module.
+        
+        Developers typically use TVTK to write Mayavi modules, and then use Mayavi to
+        interact with visualizations or create applications.
+        
+        Prerequisites
+        -------------
+        You must have the following libraries installed before installing the Mayavi
+        project:
+        
+        * `Numpy <http://pypi.python.org/pypi/numpy/1.1.1>`_ version 1.1.1 or later
+        * `VTK <http://www.vtk.org/>`_ version 5.0 or later
+        * One of the following GUI toolkit packages:
+            - `Qt <http://www.qt.io>`_ version 4.8 with either PyQt 4.11.4 or PySide 1.2.2
+            - `wxPython <http://www.wxpython.org/>`_ version 2.8 or later
+        * `configobj <http://pypi.python.org/pypi/configobj>`_
+        
+Platform: Windows
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Platform: Solaris
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries

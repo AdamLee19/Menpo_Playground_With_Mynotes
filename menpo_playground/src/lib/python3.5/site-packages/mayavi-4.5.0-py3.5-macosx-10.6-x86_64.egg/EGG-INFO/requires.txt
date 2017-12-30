@@ -1,0 +1,6 @@
+apptools
+traits
+traitsui
+
+[app]
+envisage

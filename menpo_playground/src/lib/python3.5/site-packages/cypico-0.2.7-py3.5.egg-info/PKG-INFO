@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: cypico
+Version: 0.2.7
+Summary: A Cython wrapper around the Pico face detection library.
+Home-page: https://github.com/menpo/cypico
+Author: Patrick Snape
+Author-email: p.snape@imperial.ac.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

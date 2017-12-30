@@ -1,0 +1,11 @@
+prefix=/Users/jenkins/.jenkins/jobs/menpo-playground-mac/workspace/label/darwin/build/miniconda
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: FFTW
+Description: fast Fourier transform library
+Version: 3.3.4
+Libs: -L${libdir} -lfftw3l 
+Libs.private: -lm
+Cflags: -I${includedir}

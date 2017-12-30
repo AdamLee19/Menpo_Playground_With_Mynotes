@@ -1,0 +1,10 @@
+prefix=/Users/jenkins/.jenkins/jobs/menpo-playground-mac/workspace/label/darwin/build/miniconda
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: LibYAML
+Description: Library to parse and emit YAML
+Version: 0.1.6
+Cflags:
+Libs: -L${libdir} -lyaml

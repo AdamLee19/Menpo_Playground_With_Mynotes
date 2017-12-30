@@ -1,0 +1,6 @@
+#!/Users/jenkins/.jenkins/jobs/menpo-playground-mac/workspace/label/darwin/build/miniconda/bin/python
+
+from nbconvert.nbconvertapp import main
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,58 @@
+#!/Users/jenkins/.jenkins/jobs/menpo-playground-mac/workspace/label/darwin/build/miniconda/bin/python
+# encoding: utf-8
+"""Perform face detection on images using menpodetect
+
+The estimated bounding boxes will be saved as .pts files next to the input
+image, with the same file stem as the input image e.g. image.jpg -> image.pts
+
+If the output landmark file already exists and the --force/-f flag is not passed
+the output file will not be written.
+
+Usage:
+  menpodetect [-f | --force] <path>...
+  menpodetect (-h | --help)
+  menpodetect --version
+
+Options:
+  <path>       Perform face detection on all images found at path
+  --force -f   Overwrite existing annotations
+  -h --help    Show this screen.
+  --version    Show version.
+"""
+from docopt import docopt
+
+import menpo.io as mio
+from menpo.visualize import print_progress, print_dynamic
+from menpodetect import load_dlib_frontal_face_detector
+import menpodetect  # needed for version
+
+from menpocli.io import (resolve_importable_paths, save_pointcloud_as_landmark,
+                         build_landmark_output_path)
+
+
+def detect_images(detector, img_paths, overwrite):
+    for img_path in print_progress(img_paths):
+        landmark_out_path = build_landmark_output_path(img_path)
+        if not overwrite and landmark_out_path.exists():
+            print_dynamic(
+                '{} already exists. Please set the --force/-f flag if '
+                'you wish to overwrite the file.\n'.format(landmark_out_path)
+            )
+            continue
+
+        try:
+            img = mio.import_image(img_path, normalize=False)
+            bboxes = detector(img)
+            for i, bbox in enumerate(bboxes):
+                save_pointcloud_as_landmark(img_path, i, bbox)
+        except:
+            msg = 'Unable to process {}'.format(img_path).ljust(100)
+            print_dynamic(msg + '\n')
+
+
+if __name__ == '__main__':
+    a = docopt(__doc__,
+               version='menpodetect v{}'.format(menpodetect.__version__))
+    print('\nM E N P O D E T E C T ' + 'v' + menpodetect.__version__ + '\n')
+    image_paths = resolve_importable_paths(a['<path>'])
+    detect_images(load_dlib_frontal_face_detector(), image_paths, a['--force'])

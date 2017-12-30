@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: cyffld2
+Version: 0.2.4
+Summary: A Cython wrapper around the FFLD2 face detection library.
+Home-page: https://github.com/menpo/cyffld2
+Author: Patrick Snape
+Author-email: p.snape@imperial.ac.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

@@ -1,0 +1,7 @@
+#!/Users/jenkins/.jenkins/jobs/menpo-playground-mac/workspace/label/darwin/build/miniconda/bin/python
+"""Launch the root jupyter command"""
+
+from jupyter_core.command import main
+
+if __name__ == '__main__':
+    main()

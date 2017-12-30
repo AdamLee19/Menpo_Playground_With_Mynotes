@@ -1,0 +1,6 @@
+#!/bin/bash /Users/jenkins/.jenkins/jobs/menpo-playground-mac/workspace/label/darwin/build/miniconda/bin/python.app
+if __name__ == '__main__':
+    import sys
+    import IPython
+
+    sys.exit(IPython.start_ipython())
